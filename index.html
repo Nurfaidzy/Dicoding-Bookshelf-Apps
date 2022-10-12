@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bookshelf Apps</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/output.css" />
+  </head>
+  <body class="bg-[#F5EFE6]">
+    <header class="head_bar">
+      <h1
+        class="head_bar__title text-center text-4xl font-bold py-5 text-[#7895B2] drop-shadow-xl"
+      >
+        Bookshelf Apps
+      </h1>
+    </header>
+    <main>
+      <div class="flex justify-center px-[10%] gap-10 w-full">
+        <div class="grid grid-cols-1 gap-10">
+          <section class="input_section bg-white/60 p-5 rounded-lg shadow-lg">
+            <h2 class="text-center font-bold text-xl text-[#7895B2]">
+              Masukkan Buku Baru
+            </h2>
+            <hr />
+            <form id="inputBook" class="grid grid-cols-1 gap-5 pt-2">
+              <div class="input">
+                <label for="inputBookTitle " class="font-bold text-[#182747]/50"
+                  >Judul :</label
+                ><br />
+                <input
+                  id="inputBookTitle"
+                  class="w-full border-[#7895B2] border-2 rounded-lg p-2"
+                  type="text"
+                  required
+                />
+              </div>
+              <div class="input">
+                <label for="inputBookAuthor" class="font-bold text-[#182747]/50"
+                  >Penulis :</label
+                ><br />
+                <input
+                  id="inputBookAuthor"
+                  class="w-full border-[#7895B2] border-2 rounded-lg p-2"
+                  type="text"
+                  required
+                />
+              </div>
+              <div class="input">
+                <label for="inputBookYear" class="font-bold text-[#182747]/50"
+                  >Tahun :</label
+                >
+                <input
+                  id="inputBookYear"
+                  type="number"
+                  class="w-full border-[#7895B2] border-2 rounded-lg p-2"
+                  required
+                />
+              </div>
+              <div class="input_inline">
+                <label
+                  for="inputBookIsComplete"
+                  class="font-bold text-[#182747]/50"
+                  >Selesai dibaca</label
+                >
+                <input id="inputBookIsComplete" type="checkbox" />
+              </div>
+              <button
+                id="bookSubmit"
+                type="submit"
+                class="w-full bg-[#7895B2] text-white font-bold p-2 rounded-lg"
+              >
+                Masukkan Buku ke rak
+              </button>
+            </form>
+          </section>
+
+          <section
+            class="search_section bg-white/60 p-5 rounded-lg shadow-lg h-fit"
+          >
+            <h2 class="text-center font-bold text-xl text-[#7895B2]">
+              Cari Buku (Opsional)
+            </h2>
+            <hr />
+            <form id="searchBook" class="pt-2">
+              <label for="searchBookTitle" class="font-bold text-[#182747]/50"
+                >Judul :</label
+              ><br />
+              <div class="pt-2">
+                <input
+                  id="searchBookTitle"
+                  type="text"
+                  class="w-full border-[#7895B2] border-2 rounded-lg p-2"
+                />
+              </div>
+              <br />
+              <button
+                id="searchSubmit"
+                type="submit"
+                class="w-full bg-[#7895B2] text-white font-bold p-2 rounded-lg"
+              >
+                Cari
+              </button>
+            </form>
+          </section>
+        </div>
+        <div>
+          <section class="book_shelf">
+            <h2 class="text-center py-5 text-2xl font-bold text-black/70">
+              Belum selesai dibaca
+            </h2>
+
+            <div
+              id="incompleteBookshelfList"
+              class="book_list grid grid-cols-4 gap-2 w-full"
+            >
+              <!--      <article class="book_item">-->
+              <!--        <h3>Book Title</h3>-->
+              <!--        <p>Penulis: John Doe</p>-->
+              <!--        <p>Tahun: 2002</p>-->
+              <!--    -->
+              <!--        <div class="action">-->
+              <!--          <button class="green">Selesai dibaca</button>-->
+              <!--          <button class="red">Hapus buku</button>-->
+              <!--        </div>-->
+              <!--      </article>-->
+            </div>
+          </section>
+
+          <section class="book_shelf">
+            <h2 class="text-center py-5 text-2xl font-bold text-black/70">
+              Selesai dibaca
+            </h2>
+
+            <div
+              id="completeBookshelfList"
+              class="book_list grid grid-cols-3 gap-10"
+            >
+              <!--      <article class="book_item">-->
+              <!--        <h3>Book Title</h3>-->
+              <!--        <p>Penulis: John Doe</p>-->
+              <!--        <p>Tahun: 2002</p>-->
+              <!--        -->
+              <!--        <div class="action">-->
+              <!--          <button class="green">Belum selesai di Baca</button>-->
+              <!--          <button class="red">Hapus buku</button>-->
+              <!--        </div>-->
+              <!--      </article>-->
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
